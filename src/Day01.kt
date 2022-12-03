@@ -1,4 +1,4 @@
-fun getCaloriesPerElveList(input: List<String>): List<Int> {
+fun getCaloriesPerElfList(input: List<String>): List<Int> {
     var buffer = 0
     return input.fold(mutableListOf<Int>()) { acc, calories ->
         if (calories.isEmpty()) {
@@ -13,11 +13,11 @@ fun getCaloriesPerElveList(input: List<String>): List<Int> {
 
 fun main() {
     fun part1(input: List<String>): Int {
-        return getCaloriesPerElveList(input).max()
+        return getCaloriesPerElfList(input).max()
     }
 
     fun part2(input: List<String>): Int {
-        return getCaloriesPerElveList(input).sorted().takeLast(3).sum()
+        return getCaloriesPerElfList(input).sorted().takeLast(3).sum()
     }
 
 //    // test if implementation meets criteria from the description, like:
